@@ -7,4 +7,7 @@ end
     end
     def new 
     end
+    def create 
+        @blog = Blog.create blog_params 
+    end
 end 
