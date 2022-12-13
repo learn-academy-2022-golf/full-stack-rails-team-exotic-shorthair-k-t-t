@@ -1,0 +1,14 @@
+<h1> edit blog </h1>
+<%= form_with(model: @blog, method: :patch, local: true) do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <br>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+    <br>
+    <%= form.submit 'Edit blog' %>
+    
+
+    <% end %>
+
+    <%= button_to 'Delete item', delete_blog_path(@blog), method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %> 
