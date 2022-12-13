@@ -1,4 +1,10 @@
 <h1> Exotic Blog </h1>
-<% @blogs.each do |blog| %> 
-  <h2>  <%= blog.title %> </h2>
+<% @blogs.map do |blog| %>
+  <h3><%= link_to blog.title, blog_path(blog) %></h3>
+  <%= link_to 'Add a new blog post', new_blog_path(blog) %>
+
+  <%= link_to 'Delete', blog_path(blog), method: :destroy %> 
+
 <% end %>
+
+
