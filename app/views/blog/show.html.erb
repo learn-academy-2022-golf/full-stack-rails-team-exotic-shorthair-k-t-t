@@ -1,5 +1,8 @@
 <h2> <%= @blog.title %> </h2>
 <h3> <%= @blog.content %> </h3>
+<h6> <%= @blog.created_at %> </h6>
+<h6> <%= @blog.updated_at %> </h6>
+<h6> <%= @blog.id %> </h6>
 <%= link_to 'Back to all blog posts', blogs_path %>
 <%= link_to 'Edit', edit_blog_path(@blog) %>
 
