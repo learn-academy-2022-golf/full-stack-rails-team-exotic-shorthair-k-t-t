@@ -11,14 +11,14 @@ end
     def create 
         @blog = Blog.create blog_params 
         if @blog.valid?
-            redirect_to blog_path
+            redirect_to blogs_path
         else
             render :new, status: :unprocessable_entity
         end
     end 
         def edit 
             @blog = Blog.find(params[:id])
-        end
+        end 
         def update 
             @blog = Blog.find(params[:id])
             @blog.update(blog_params)
